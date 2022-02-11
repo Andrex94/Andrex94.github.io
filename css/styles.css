@@ -1,0 +1,22 @@
+body {
+  margin: 0 auto;
+}
+
+.introduction {
+  background-image: url(/biopic2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit: fill;
+  width: max-width;
+  height: max-width;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5em;
+  padding-bottom: 5em;
+  padding-left: 2em;
+}
+
+ul .portfolio {
+  display: inline-block;
+}
