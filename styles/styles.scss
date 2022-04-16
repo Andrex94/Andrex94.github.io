@@ -26,6 +26,23 @@
   --transition-2: all 0.3s linear;
 }
 
+.light-mode {
+  --color-primary: #eaeaea;
+  --color-secondary: #175873;
+  --color-jet: #b2becd;
+  --color-lightjet: #343434;
+  --color-jetgrey: #2a2e35;
+  --color-white: #343434;
+  --color-black: #000;
+  --color-grey0: #f8f8f8;
+  --color-grey-1: #dbe1e8;
+  --color-grey-2: #b2becd;
+  --color-grey-3: #6c7983;
+  --color-grey-4: #454e56;
+  --color-grey-5: #f8f8f8;
+  --color-grey-6: #12181b;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   background-color: var(--color-primary);
@@ -96,7 +113,12 @@ section {
   }
 }
 
-// controls
+/*
+===============
+  Controls
+===============
+*/
+
 .controls {
   position: fixed;
   z-index: 10;
@@ -136,6 +158,36 @@ section {
 
 /*
 ===============
+  Themes
+===============
+*/
+
+.theme-btn {
+  top: 5%;
+  right: 3%;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--color-grey-4);
+  cursor: pointer;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: var(--box-shadow-1);
+  transition: all 0.1s ease-in-out;
+  &:active {
+    transform: translateY(-5px);
+  }
+  i {
+    font-size: 1.4rem;
+    color: var(--color-grey-2);
+    pointer-events: none;
+  }
+}
+
+/*
+===============
   Header content
 ===============
 */
@@ -159,7 +211,7 @@ section {
       left: 0;
       top: 0;
       z-index: -1;
-      clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+      clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
     }
     .video-container {
       border-radius: var(--br-sm-2);
@@ -186,6 +238,17 @@ section {
     justify-content: center;
     padding-right: 9rem;
     position: relative;
+    .h-shape {
+      transition: var(--transition-1);
+      height: 100%;
+      width: 65%;
+      background-color: var(--color-jet);
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: -1;
+      clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+    }
     .name {
       font-size: 3rem;
       span {
@@ -374,6 +437,90 @@ section {
   }
 }
 
+/*
+===============
+  Contact
+===============
+*/
+
+.contact-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding-top: 20rem;
+  padding-bottom: 1rem;
+
+  .left-contact {
+    padding-right: 1rem;
+    padding-left: 0;
+    h4 {
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      padding-left: 1rem;
+      padding-bottom: 1rem;
+    }
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      p {
+        line-height: 2rem;
+        color: var(--color-lightjet);
+        padding: 0 !important;
+        margin: 0.3rem 0 !important;
+        i {
+          color: var(--color-secondary);
+          padding-right: 1rem;
+        }
+        span {
+          padding-left: 0.3rem;
+        }
+      }
+    }
+  }
+  .right-contact {
+    margin-left: 3rem;
+    .input-control {
+      margin: 1.5rem 0;
+      input,
+      textarea {
+        border-radius: 30px;
+        font-size: inherit;
+        font-weight: inherit;
+        font-family: inherit;
+        padding: 0.8rem 1.1rem;
+        outline: none;
+        border: none;
+        background-color: var(--color-grey-5);
+        color: var(--color-white);
+        width: 100%;
+        resize: none;
+      }
+    }
+    .input-control2 {
+      display: flex;
+      :last-child {
+        margin-left: 1.5rem;
+      }
+    }
+    .submit-btn {
+      border-radius: 30px;
+      padding: 10px 20px;
+      display: flex;
+      align-items: flex-start;
+      font-size: 20px;
+      cursor: pointer;
+      background-color: var(--color-grey-5);
+      color: var(--color-lightjet);
+      &:hover {
+        background-color: var(--color-secondary);
+        transition: var(--transition-2);
+      }
+    }
+  }
+}
+.contact-footer {
+  padding-top: 15rem;
+}
 /*
 ===============
   Independent companents
