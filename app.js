@@ -4,6 +4,7 @@ const sectBtn = document.querySelectorAll(".control");
 const allSections = document.querySelector(".main-content");
 const switchBtn = document.querySelector(".switch-btn");
 const video = document.querySelector(".video-container");
+const date = document.querySelector(".date");
 
 function pageTransitions() {
   //  Button click active class
@@ -50,3 +51,6 @@ switchBtn.addEventListener("click", function () {
     video.play();
   }
 });
+
+// Date
+date.innerHTML = new Date().getFullYear();
