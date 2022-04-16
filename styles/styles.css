@@ -876,4 +876,129 @@ footer {
 footer .footer-links {
   padding-left: 2rem;
 }
+
+@media screen and (max-width: 800px) {
+  header {
+    padding: 0;
+  }
+  header .right-header {
+    padding: 2rem !important;
+  }
+  .theme-btn {
+    width: 30px;
+    height: 30px;
+  }
+  .header-content {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    padding-bottom: 6rem;
+  }
+  .left-header .h-shape {
+    display: none;
+  }
+  .left-header .video-container {
+    height: 80% !important;
+  }
+  .right-header {
+    -ms-grid-row: 1;
+    grid-row: 1;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .right-header .h-shape {
+    display: none;
+  }
+  .right-header .name {
+    font-size: 2.5rem !important;
+    margin: 0 auto !important;
+    padding-left: 2.5rem;
+    text-align: center;
+  }
+  .right-header p {
+    text-align: center;
+  }
+  .right-header .btn-container {
+    margin: 0 auto;
+  }
+  .right-header .social-media {
+    padding-right: 3rem;
+    margin: 0 auto;
+  }
+  .right-header .social-media i {
+    margin: 0 auto;
+  }
+  .about-img {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px;
+    height: 150px;
+  }
+  .about-container {
+    margin: 0 auto;
+    padding-top: 0;
+    padding-bottom: 0;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .about-container .left-about {
+    margin: 0 auto;
+    padding-right: 0;
+  }
+  .about-container .left-about h4 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .about-container .right-about {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    padding-top: 3rem;
+  }
+  .about-stats {
+    margin-bottom: 6rem;
+    padding-top: 0;
+  }
+  section {
+    padding: 2rem 2.5rem !important;
+  }
+  .controls {
+    top: auto;
+    bottom: 0;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    width: 100%;
+    background-color: var(--color-jetgrey);
+  }
+  .controls .control {
+    margin: 1rem 0.3rem;
+  }
+  .main-title h2 {
+    font-size: 2rem;
+  }
+  .main-title h2 .big-text {
+    font-size: 3rem;
+  }
+  footer {
+    margin-bottom: 6rem;
+    padding: 0 1rem;
+  }
+  footer p {
+    font-size: 1rem;
+  }
+  footer .social-media {
+    padding-right: 3rem;
+  }
+  footer .social-media i {
+    font-size: 1rem;
+  }
+}
 /*# sourceMappingURL=styles.css.map */
