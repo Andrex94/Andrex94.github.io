@@ -4,7 +4,7 @@ const sectBtn = document.querySelectorAll(".control");
 const allSections = document.querySelector(".main-content");
 const switchBtn = document.querySelector(".switch-btn");
 const video = document.querySelector(".video-container");
-const date = document.querySelector(".date");
+const dates = document.querySelectorAll(".date");
 
 function pageTransitions() {
   //  Button click active class
@@ -38,6 +38,11 @@ function pageTransitions() {
     }
   });
 
+  // Date
+  dates.forEach((date) => {
+    date.innerHTML = new Date().getFullYear();
+  });
+
   // Toggle theme
   const themeBtn = document.querySelector(".theme-btn");
   themeBtn.addEventListener("click", () => {
@@ -47,17 +52,3 @@ function pageTransitions() {
 }
 
 pageTransitions();
-
-// Switch button
-switchBtn.addEventListener("click", function () {
-  if (!switchBtn.classList.contains("slide")) {
-    switchBtn.classList.add("slide");
-    video.pause();
-  } else {
-    switchBtn.classList.remove("slide");
-    video.play();
-  }
-});
-
-// Date
-date.innerHTML = new Date().getFullYear();

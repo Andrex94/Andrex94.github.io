@@ -589,6 +589,134 @@ section {
 
 /*
 ===============
+  Portfolio
+===============
+*/
+.portfolio-text {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.portfolios {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  margin-top: 3rem;
+}
+
+.portfolios .portfolio-item {
+  position: relative;
+}
+
+.portfolios .portfolio-item img {
+  width: 100%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 15px;
+}
+
+.portfolios .portfolio-item .hover-items {
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-secondary);
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: var(--transition-1);
+  transition: var(--transition-1);
+}
+
+.portfolios .portfolio-item .hover-items h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-grey0);
+}
+
+.portfolios .portfolio-item .hover-items p {
+  font-size: 1rem;
+  text-align: center;
+  color: var(--color-grey0);
+  margin-bottom: 1rem;
+}
+
+.portfolios .portfolio-item .hover-items .code {
+  font-size: 1.3rem;
+}
+
+.portfolios .portfolio-item .hover-items .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.portfolios .portfolio-item .hover-items .icons .icon {
+  background-color: var(--color-primary);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 1rem;
+  cursor: pointer;
+  -webkit-transition: var(--transition-1);
+  transition: var(--transition-1);
+}
+
+.portfolios .portfolio-item .hover-items .icons .icon i {
+  font-size: 1.5rem;
+  color: var(--color-lightjet);
+  margin: 0 1rem;
+}
+
+.portfolios .portfolio-item .hover-items .icons .icon:hover {
+  background-color: var(--color-lightjet);
+}
+
+.portfolios .portfolio-item .hover-items .icons .icon:hover i {
+  color: var(--color-primary);
+}
+
+.portfolio-item:hover .hover-items {
+  opacity: 0.9;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+/*
+===============
   Contact
 ===============
 */
@@ -847,6 +975,7 @@ section {
 
 .stat-title::before {
   content: "";
+  position: absolute;
   left: 50%;
   top: 0;
   width: 40%;
@@ -962,6 +1091,33 @@ footer .footer-links {
   section {
     padding: 2rem 2.5rem !important;
   }
+  .portfolios {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    padding-bottom: 6rem;
+  }
+  .contact-container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    padding-top: 7rem;
+    padding-bottom: 6rem;
+  }
+  .contact-container .left-contact {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+  .contact-container .left-contact h4 {
+    text-align: center;
+  }
+  .contact-container .left-contact .contact-info {
+    padding-left: 6rem;
+  }
+  .contact-container .left-contact .contact-info p {
+    text-align: justify;
+  }
+  .contact-container .right-contact {
+    margin-top: 5rem;
+  }
   .controls {
     top: auto;
     bottom: 0;
@@ -976,7 +1132,6 @@ footer .footer-links {
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
     width: 100%;
-    background-color: var(--color-jetgrey);
   }
   .controls .control {
     margin: 1rem 0.3rem;
@@ -985,14 +1140,14 @@ footer .footer-links {
     font-size: 2rem;
   }
   .main-title h2 .big-text {
-    font-size: 3rem;
+    font-size: 3rem !important;
   }
   footer {
     margin-bottom: 6rem;
     padding: 0 1rem;
   }
   footer p {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
   footer .social-media {
     padding-right: 3rem;

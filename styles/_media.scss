@@ -70,10 +70,8 @@
       h4 {
         font-size: 1.5rem;
         text-align: center;
+        
       }
-      p {
-      }
-    }
     .right-about {
       grid-template-columns: 1fr;
       padding-top: 3rem;
@@ -88,6 +86,32 @@
     padding: 2rem 2.5rem !important;
   }
 
+  .portfolios {
+    grid-template-columns: 1fr;
+    padding-bottom: 6rem;
+  }
+  .contact-container {
+    grid-template-columns: 1fr;
+    padding-top: 7rem;
+    padding-bottom: 6rem;
+    .left-contact {
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+      h4 {
+        text-align: center;
+      }
+      .contact-info {
+        padding-left: 6rem;
+        p {
+          text-align: justify;
+        }
+      }
+    }
+    .right-contact {
+      margin-top: 5rem;
+    }
+  }
+
   .controls {
     top: auto;
     bottom: 0;
@@ -96,7 +120,7 @@
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
-    background-color: var(--color-jetgrey);
+    //background-color: var(--color-jetgrey);
     .control {
       margin: 1rem 0.3rem;
     }
@@ -105,7 +129,7 @@
     h2 {
       font-size: 2rem;
       .big-text {
-        font-size: 3rem;
+        font-size: 3rem !important;
       }
     }
   }
@@ -113,7 +137,7 @@
     margin-bottom: 6rem;
     padding: 0 1rem;
     p {
-      font-size: 1rem;
+      font-size: 0.8rem;
     }
     .social-media {
       padding-right: 3rem;
@@ -123,3 +147,6 @@
     }
   }
 }
+
+
+
