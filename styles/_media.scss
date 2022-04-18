@@ -70,8 +70,8 @@
       h4 {
         font-size: 1.5rem;
         text-align: center;
-        
       }
+    }
     .right-about {
       grid-template-columns: 1fr;
       padding-top: 3rem;
@@ -90,10 +90,11 @@
     grid-template-columns: 1fr;
     padding-bottom: 6rem;
   }
+
   .contact-container {
     grid-template-columns: 1fr;
     padding-top: 7rem;
-    padding-bottom: 6rem;
+    padding-bottom: 0;
     .left-contact {
       margin-top: 3rem;
       margin-bottom: 3rem;
@@ -104,11 +105,15 @@
         padding-left: 6rem;
         p {
           text-align: justify;
+          font-size: 1rem;
+          span {
+            font-size: 1rem;
+          }
         }
       }
     }
     .right-contact {
-      margin-top: 5rem;
+      margin: 5rem auto;
     }
   }
 
@@ -125,6 +130,7 @@
       margin: 1rem 0.3rem;
     }
   }
+
   .main-title {
     h2 {
       font-size: 2rem;
@@ -133,8 +139,9 @@
       }
     }
   }
+
   footer {
-    margin-bottom: 6rem;
+    margin-bottom: 4rem;
     padding: 0 1rem;
     p {
       font-size: 0.8rem;
@@ -146,7 +153,4 @@
       }
     }
   }
-}
-
-
-
+} ;
